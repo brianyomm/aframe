@@ -8,9 +8,14 @@
   </head>
   <body>
     <a-scene>
+        <a-camera wasd-controls-enabled="false"></a-camera>
       <a-sky src="original_01.jpg" rotation="0 -130 0"></a-sky>
-
-      <a-text font="kelsonsans" value="Puy de Sancy, France" width="6" position="-2.5 0.25 -1.5"
+        <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
+        <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"><a-entity class="link" geometry="primitive: plane; height: 1; width: 1" material="shader: flat; src: #cubes-thumb" event-set__mouseenter="[object Object]" event-set__mouseleave="[object Object]" event-set__click="[object Object]" proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" scale="1.2 1.2 1"></a-entity><a-entity class="link" geometry="primitive: plane; height: 1; width: 1" material="shader: flat; src: #cubes-thumb" event-set__mouseenter="[object Object]" event-set__mouseleave="[object Object]" event-set__click="[object Object]" proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound" scale="1.2 1.2 1"></a-entity></a-entity>
+        <a-entity data-brackets-id="141" template="src: #link" data-src="#city" data-thumb="#city-thumb"><a-entity class="link" geometry="primitive: plane; height: 1; width: 1" material="shader: flat; src: #city-thumb" event-set__mouseenter="scale: 1.2 1.2 1" event-set__mouseleave="scale: 1 1 1" event-set__click="_target: #image-360; _delay: 300; material.src: #city" proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound"></a-entity></a-entity>
+        <a-entity data-brackets-id="142" template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"><a-entity class="link" geometry="primitive: plane; height: 1; width: 1" material="shader: flat; src: #sechelt-thumb" event-set__mouseenter="scale: 1.2 1.2 1" event-set__mouseleave="scale: 1 1 1" event-set__click="_target: #image-360; _delay: 300; material.src: #sechelt" proxy-event="event: click; to: #image-360; as: fade" sound="on: click; src: #click-sound"></a-entity></a-entity>
+      </a-entity>
+      <a-text font="kelsonsans" value="Outdoor Furniture Test" width="6" position="-2.5 0.25 -1.5"
               rotation="0 15 0"></a-text>
     </a-scene>
   </body>
